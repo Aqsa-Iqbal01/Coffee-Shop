@@ -1,101 +1,94 @@
-import Image from "next/image";
+import Image from 'next/image';
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="font-serif bg-slate-50" >
+      <header className="bg-slate-500 p-4 text-white">
+        <nav className="container mx-auto flex justify-between items-center">
+          <h1 className="text-2xl font-italic">Coffee Shop</h1>
+          <div>
+            <a href="#menu" className="mr-4 hover:underline">Menu</a>
+            <a href="#about" className="mr-4 hover:underline">About Us</a>
+            <a href="#contact" className="hover:underline">Contact</a>
+          </div>
+        </nav>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <section className="text-center  p-10 bg-gradient-to-r from-red-400 to-red-300 bg-cover bg-center h-screen bg-[url('/images/coffee8.jpg')]">
+        <h1 className="text-5xl font-bold mb-4 text-white mt-12">Welcome to Our Coffee Shop</h1>
+        <p className="mb-4 text-lg text-white">Experience the best coffee in town!</p>
+        <button className="bg-orange-700 text-white px-6 py-2 rounded-lg hover:bg-orange-800 transition duration-300">
+          Order Now
+        </button>
+      </section>
+
+      <section id="menu" className="container mx-auto p-10 text-red-950 ">
+        <h2 className="text-4xl font-bold mb-4 text-center">Our Menu</h2>
+        <ul className="list-disc pl-5 mb-8 text-lg">
+          <li className="mb-2">Espresso - $3.00</li>
+          <li className="mb-2">Cappuccino - $4.00</li>
+          <li className="mb-2">Latte - $4.50</li>
+          <li className="mb-2">Mocha - $5.00</li>
+          <li className="mb-2">Americano - $3.50</li>
+          <li className="mb-2">Cold Brew - $4.00</li>
+        </ul>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {['coffee1', 'coffee2', 'coffee3', 'coffee4','coffee5','coffee6'].map((coffee, index) => (
+            <div key={index} className="relative w-full h-48">
+              <Image
+                src={`/images/${coffee}.jpg`}
+                alt={`Coffee ${index + 1}`}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-lg shadow-lg transition-transform transform hover:scale-105"
+              />
+            </div>
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      <section id="about" className="text-center p-10">
+        <h2 className="text-4xl font-bold mb-4 text-red-950">About Us</h2>
+        <Image
+          src="/images/coffee7.jpg" // Adjust the path accordingly
+          alt="Our Coffee Shop"
+          width={600}
+          height={400}
+          className="rounded-lg shadow-lg mb-4 "
+        />
+        <p className="mb-4 text-lg max-w-2xl mx-auto">
+          Welcome to our coffee shop! Established in 2020, we are passionate about serving the finest coffee from around the world.
+          Our cozy environment is the perfect place to relax, catch up with friends, or work on your next big idea.
+        </p>
+        <p className="mb-4 text-lg max-w-2xl mx-auto">
+          Our mission is to provide quality coffee and a delightful experience for all our customers.
+          Whether you're a coffee connoisseur or just looking for a quick caffeine fix, we have something for everyone!
+        </p>
+      </section>
+
+      <section id="contact" className="bg-gradient-to-r from-slate-400 to-slate-300 p-10">
+        <h2 className="text-4xl font-bold mb-4 text-center">Contact Us</h2>
+        <form className="flex flex-col max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
+          <label className="mb-2" htmlFor="name">Name</label>
+          <input className="border rounded p-2 mb-4 focus:outline-none focus:ring focus:ring-orange-500" type="text" id="name" required />
+
+          <label className="mb-2" htmlFor="email">Email</label>
+          <input className="border rounded p-2 mb-4 focus:outline-none focus:ring focus:ring-orange-500" type="email" id="email" required />
+
+          <label className="mb-2" htmlFor="message">Message</label>
+          <textarea className="border rounded p-2 mb-4 focus:outline-none focus:ring focus:ring-orange-500" id="message" required />
+
+          <button className="bg-orange-700 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition duration-300" type="submit">
+            Send Message
+          </button>
+        </form>
+      </section>
+
+      <footer className="bg-gray-800 p-4 text-center text-white">
+        <p>Copyrights © 2024 | Aqsa Iqbal Coffee Shop</p>
       </footer>
     </div>
   );
-}
+};
+
+export default Home;
