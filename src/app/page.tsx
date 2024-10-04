@@ -62,7 +62,7 @@ const Home = () => {
         </p>
         <p className="mb-4 text-lg max-w-2xl mx-auto">
           Our mission is to provide quality coffee and a delightful experience for all our customers.
-          Whether you're a coffee connoisseur or just looking for a quick caffeine fix, we have something for everyone!
+          Whether you re a coffee connoisseur or just looking for a quick caffeine fix, we have something for everyone!
         </p>
       </section>
 
