@@ -14,8 +14,8 @@ const Home = () => {
         </nav>
       </header>
 
-      <section className="text-center  p-10 bg-gradient-to-r from-red-400 to-red-300 bg-cover bg-center h-screen bg-[url('/images/coffee8.jpg')]">
-        <h1 className="text-5xl font-bold mb-4 text-white mt-12">Welcome to Our Coffee Shop</h1>
+      <section className="text-center  p-10 bg-gradient-to-r from-red-400 to-red-300 bg-cover bg-center h-screen bg-[url('/images/coffee.jpg')]">
+        <h1 className="text-5xl text-white font-bold mb-4 text- mt-12">Welcome to Our Coffee Shop</h1>
         <p className="mb-4 text-lg text-white">Experience the best coffee in town!</p>
         <button className="bg-orange-700 text-white px-6 py-2 rounded-lg hover:bg-orange-800 transition duration-300">
           Order Now
@@ -54,7 +54,7 @@ const Home = () => {
           alt="Our Coffee Shop"
           width={600}
           height={400}
-          className="rounded-lg shadow-lg mb-4 "
+          className="rounded-lg shadow-lg mb-12"
         />
         <p className="mb-4 text-lg max-w-2xl mx-auto">
           Welcome to our coffee shop! Established in 2020, we are passionate about serving the finest coffee from around the world.
