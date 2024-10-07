@@ -59,13 +59,13 @@ const Home = () => {
           height={400}
           className="rounded-lg shadow-lg mb-12"
         />
-        <p className="mb-4 text-lg max-w-2xl mx-auto flex-1">
+        <p className="mb-4 text-lg max-w-2xl mx-auto">
           Welcome to our coffee shop! Established in 2020, we are passionate about serving the finest coffee from around the world.
           Our cozy environment is the perfect place to relax, catch up with friends, or work on your next big idea.
         </p>
         <p className="mb-4 text-lg max-w-2xl mx-auto">
           Our mission is to provide quality coffee and a delightful experience for all our customers.
-          Whether you're a coffee connoisseur or just looking for a quick caffeine fix, we have something for everyone!
+          Whether you&apos;re a coffee connoisseur or just looking for a quick caffeine fix, we have something for everyone!
         </p>
       </section>
 
